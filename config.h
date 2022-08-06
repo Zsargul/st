@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Misc Termsyn";
+static char *font = "Misc Tamsyn:style=Regular:size=14:autohint=true";
 static int borderpx = 2;
 
 /*
