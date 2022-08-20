@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Misc Tamsyn:style=Regular:size=14:autohint=true";
+static char *font = "Tamsyn:style=Regular:size=12:autohint=true";
 /* Spare Fonts */
 static char *font2[] = {
-	"Noto Color Emoji:style=Regular:pixelsize=14:antialias=true:autohint=true"
+	"Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true"
 };
 
 static int borderpx = 2;
