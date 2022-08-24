@@ -17,6 +17,7 @@ INCS = -I$(X11INC) \
        `$(PKG_CONFIG) --cflags fontconfig` \
        `$(PKG_CONFIG) --cflags freetype2`
 LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
+       -Wl,-rpath=/usr/lib \ # Needed for use of libxf-bgra if on distro that doesn't support AUR
        `$(PKG_CONFIG) --libs fontconfig` \
        `$(PKG_CONFIG) --libs freetype2`
 
