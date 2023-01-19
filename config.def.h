@@ -6,6 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Misc Tamsyn:style=Regular:size=14:autohint=true";
+/* Spare Fonts */
+static char *font2[] = {
+	"Noto Color Emoji:style=Regular:pixelsize=14:antialias=true:autohint=true"
+};
+
 static int borderpx = 2;
 
 /*
@@ -94,7 +99,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.5, alphaUnfocused = 0.3;
+float alpha = 0.7, alphaUnfocused = 0.5;
 /* bg color */
 unsigned int bg = 0, bgUnfocused = 0;
 
@@ -206,8 +211,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ ShiftMask,            XK_Up,          kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Down,        kscrolldown,    {.i = -1} },
 };
 
 /*
@@ -304,7 +309,7 @@ static Key key[] = {
 	{ XK_KP_7,          XK_ANY_MOD,     "\033Ow",       +2,    0},
 	{ XK_KP_8,          XK_ANY_MOD,     "\033Ox",       +2,    0},
 	{ XK_KP_9,          XK_ANY_MOD,     "\033Oy",       +2,    0},
-	{ XK_Up,            ShiftMask,      "\033[1;2A",     0,    0},
+	// { XK_Up,            ShiftMask,      "\033[1;2A",     0,    0},
 	{ XK_Up,            Mod1Mask,       "\033[1;3A",     0,    0},
 	{ XK_Up,         ShiftMask|Mod1Mask,"\033[1;4A",     0,    0},
 	{ XK_Up,            ControlMask,    "\033[1;5A",     0,    0},
@@ -313,7 +318,7 @@ static Key key[] = {
 	{ XK_Up,ShiftMask|ControlMask|Mod1Mask,"\033[1;8A",  0,    0},
 	{ XK_Up,            XK_ANY_MOD,     "\033[A",        0,   -1},
 	{ XK_Up,            XK_ANY_MOD,     "\033OA",        0,   +1},
-	{ XK_Down,          ShiftMask,      "\033[1;2B",     0,    0},
+	// { XK_Down,          ShiftMask,      "\033[1;2B",     0,    0},
 	{ XK_Down,          Mod1Mask,       "\033[1;3B",     0,    0},
 	{ XK_Down,       ShiftMask|Mod1Mask,"\033[1;4B",     0,    0},
 	{ XK_Down,          ControlMask,    "\033[1;5B",     0,    0},
